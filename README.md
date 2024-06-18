@@ -7,9 +7,9 @@ This was my last year project "Virtual Lab" which is an online IDE or compiler w
 C++, Java, Python, C
 
 ## Future Scope
--Can add more supported languages
--Can add real-time feature so it can be used in online class or meetings
--Can add auto-complete syntax feature and also error highligting
+-Can add more supported languages  
+-Can add real-time feature so it can be used in online class or meetings  
+-Can add auto-complete syntax feature and also error highligting  
 
 ## How to setup locally
 -Step 1:Open in VScode  
