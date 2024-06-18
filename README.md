@@ -12,9 +12,9 @@ C++, Java, Python, C
 -Can add auto-complete syntax feature and also error highligting
 
 ## How to setup locally
--Step 1:Open in VScode
--Step 2:Run the command - npm install (make sure the Node Runtime is Installed);
--Step 3:Run the command - node index.js
--Step 4:Go to the browser on - https://localhost:3000/
-
+-Step 1:Open in VScode  
+-Step 2:Run the command - npm install (make sure the Node Runtime is Installed)  
+-Step 3:Run the command - node index.js  
+-Step 4:Go to the browser on - https://localhost:3000/  
+  
 THANKS ALOT! <keep Coding>
