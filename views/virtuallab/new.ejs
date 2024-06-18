@@ -1,0 +1,47 @@
+<% layout("layouts/editorTemplate")%>
+<h1 class="text-center text-light">Create Lab</h1>
+<div class="col-6 offset-3">
+    <form action="/virtuallab/new" class="needs-validation" method="post" novalidate>
+        <div class="mb-3">
+            <label for="" class="form-label text-light" >File Name :</label>
+            <input type="text" class="form-control" name="code[title]" required>
+            <div class="invalid-feedback">
+                Please provide a file name.
+            </div> 
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label text-light" >Langauge :</label>
+            <select class="form-select" id="langaugeSelectInp" aria-label="Default select example" name="code[languagevalue]" required>
+                <option selected disabled value="">---Select Coding Language---</option>
+                <option value="62">Java</option>
+                <option value="70">Python</option>
+                <option value="54">C++</option>
+                <option value="75">C</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid language.
+              </div>
+        </div>
+        <button id="createBtn" class="btn btn-success">Create</button>
+    </form>
+</div>
+
+<script>
+    const navLink = document.querySelectorAll(".nav-link")[2];
+    navLink.classList.remove("active")
+</script>
+
+<!-- <script>
+    // This script is for checking whether the language is selected or not
+    const langaugeSelectInp = document.getElementById("langaugeSelectInp");
+    const createBtn = document.querySelector("#createBtn");
+    createBtn.addEventListener("click", (event) => {
+        if(langaugeSelectInp.value === "---Select Coding Language---") {
+            event.preventDefault();
+            alert("Please Select Any Language!")
+        }
+    })
+</script>    -->

@@ -1,0 +1,23 @@
+<% layout("layouts/editorTemplate") %>
+<h1 class="text-center text-white">Login</h1>
+<div class="col-md-6" style="margin: auto;">
+    <form action="/login" class="needs-validation text-white" method="post" novalidate>
+        <div class="mb-3">
+            <label class="form-label" for="username">Username</label>
+            <input class="form-control" type="text" id="username" name="username" required >
+            <div class="valid-feedback">
+            Looks good!
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="password">Password</label>
+            <input class="form-control" type="password" id="password" name="password" required >
+            <div class="valid-feedback">
+            Looks good!
+            </div>
+        </div>
+        <label class="form-label" for="password">Don't have an account? <a class="mb-4" href="/register">Sign Up</a></label>
+        <br>
+        <button class="mt-2 btn btn-success">Login</button>
+    </form>
+</div>

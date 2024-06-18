@@ -1,0 +1,42 @@
+<% layout("layouts/editorTemplate") %>
+<h2 class="text-center text-light mb-3">My Codes</h2>
+<div class="row d-flex justify-content-center">
+    <% let flag = false %>
+    <div class="col-md-6">
+            <% if(codes.length != 0 ) { %>
+                <% for(let code of codes) { %>
+                    <% if(currentUser && code.author.equals(currentUser._id)) {%>
+                        <% flag = true %>
+                    <div class="card text-bg-dark mb-2">
+                        <div class="card-body">
+                          <h5 class="card-title"><%= code.title %> - 
+                            <% if(code.languagevalue == 62) { %> 
+                                Java 
+                            <% } else if(code.languagevalue == 54) { %> 
+                                C++ 
+                            <% } else if(code.languagevalue == 70) { %> 
+                                Python 
+                            <% } else if(code.languagevalue == 75) { %> 
+                                C
+                            <% } %>
+                            </h5>
+                          <hr>
+                          <a href="/virtuallab/<%= code._id %>" class="btn btn-primary">View Code</a>
+                          <form class="d-inline" action="/virtuallab/<%= code._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-danger">Delete</button>
+                          </form> 
+                        </div>
+                      </div>
+                      <% }%>
+                <% } %>
+            <% } %>       
+    </div>
+    <% if(!flag) { %>
+        <h2 class="text-center text-light">No Code Available! - <a href="/virtuallab/new">Create a New Repository</a></h2>
+    <% } %>
+</div>
+
+<script>
+    const navLink = document.querySelectorAll(".nav-link")[1];
+    navLink.classList.remove("active")
+</script>

@@ -1,0 +1,46 @@
+<div class="row m-2">
+    <div class="col-md-8">
+        <div class="d-flex" style="border-radius: 10px 10px 0 0 ; background: rgb(33, 45, 49);">
+            <div class="col-12 w-25" style="margin-right: 5px;">
+                <select disabled class="form-select bg-light" id="inlineFormSelectPref">
+                  <% if (repl.languagevalue == '62') { %>
+                    <option selected value="62">Java</option>
+                  <% } else if (repl.languagevalue == '54') { %>
+                    <option selected value="54">C++</option>
+                  <% } else if (repl.languagevalue == '70') { %>
+                    <option selected value="70">Python<option>
+                  <% } else if (repl.languagevalue == '75') { %>
+                    <option selected value="75">C</option>
+                  <% } %>
+                </select>
+              </div>
+              <div>
+                <button type="button" id="compileCode" class="btn btn-success">Run</button>
+                <% if(currentUser && repl.author.equals(currentUser._id)) {%>
+                <button class="btn btn-info" id="saveBtn">Save</button>
+                <!-- <button type="button" id="getCode" class="btn btn-info">Get Code</button> -->
+                <form action="/virtuallab/<%= repl._id %>?_method=DELETE" class="d-inline" method="post">
+                <button class="btn btn-danger">Delete</button>
+                </form>
+                <% } %>
+              </div>
+            </div>
+
+        <textarea id="editor" type="text" id="editor" class="form-control" aria-label="First name" name="code"><%= repl.code %></textarea>
+      
+    </div>
+    <div id="io-box-container" class="col-md-4 d-flex flex-column rounded bg-dark">
+        <div class="h-50">
+            <label for="Input" class="text-light mt-4">Input</label>
+            <textarea type="text" class="form-control h-75" id="inputElement" aria-label="Last name"></textarea>
+        </div>
+        <div class="h-50" >
+            <label for="Output" class="text-light mb-2">Output</label>
+            <textarea disabled id="outputInp" type="text" class="form-control h-75"  aria-label="Last name"></textarea>
+        </div>
+      
+    </div>
+</div>
+
+<!-- Script for updating the code to the database Route is this - app.put("/virtuallab/:id", async(req, res)-->
+<script src="/js/utilsJs/save.js"></script>

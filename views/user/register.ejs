@@ -1,0 +1,31 @@
+<% layout("layouts/editorTemplate") %>
+<h1 class="text-center text-white">Register</h1>
+<div class="col-md-6 offset-3">
+    <form action="/register" class="needs-validation text-white" method="post" novalidate>
+        <div class="mb-3">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" type="email" id="email" name="email" required >
+            <div class="valid-feedback">
+            Looks good!
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="username">Username</label>
+            <input class="form-control" type="text" id="username" name="username" required >
+            <div class="valid-feedback">
+            Looks good!
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="password">Password</label>
+            <input class="form-control" type="password" id="password" name="password" required >
+            <div class="valid-feedback">
+            Looks good!
+            </div>
+        </div>
+        <label class="form-label" for="password">Have an account? <a class="mb-4" href="/login">Log in</a></label>
+        <!-- <a class="mb-4" href="/login">Already a user!</a> <br> -->
+        <br>
+        <button class="mt-2 btn btn-success">Register</button>
+    </form>
+</div>
