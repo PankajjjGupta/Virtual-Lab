@@ -1,6 +1,6 @@
 const outputInp = document.querySelector("#outputInp");
 const apiUrl = 'https://judge0-ce.p.rapidapi.com/submissions?base64_encoded=true';
-const apiKey = 'fa515036efmsh968d7201508968ep10dc2ajsndc076d9bd49d'; // My Api Key Of Rapid API
+const apiKey = '<YOUR_API_KEY_HERE'; // Your Api Key Of Rapid API
 // Function to compile code using Judge0 API
 async function compileCode(code, language, stdin) {
 	
