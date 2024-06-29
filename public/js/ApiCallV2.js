@@ -6,7 +6,7 @@ const outputTextarea = document.querySelector("#outputInp");
 console.log("API CALL VERSION 2 JS FILE!")
 // API Related Variables
 const API_URL = 'https://judge0-ce.p.rapidapi.com/submissions?base64_encoded=true&fields=*';
-const API_KEY = 'fa515036efmsh968d7201508968ep10dc2ajsndc076d9bd49d'; // My Api Key Of Rapid API
+const API_KEY = '<YOUR_API_KEY_HERE'; // Your Api Key Of Rapid API
 
 // This function is to display the OUTPUT on the Ouput Screen!
 const displayOutput = (data) => {
